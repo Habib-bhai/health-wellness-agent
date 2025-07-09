@@ -12,3 +12,4 @@ class UserSessionContext(BaseModel):
     injury_notes: Optional[str] = None
     handoff_logs: List[str] = []
     progress_logs: List[Dict[str, str]] = []
+    progress_checking_date: str | None = None

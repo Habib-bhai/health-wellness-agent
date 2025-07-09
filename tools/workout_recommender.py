@@ -1,8 +1,14 @@
 # Suggests workout plan based on parsed goals and experience
 
-from agents import function_tool
+from agents import Agent 
+from utils.config import model
 
 
-@function_tool
-def workout_recommender():
-    pass
+workout_recommender_tool = Agent(
+    name="workout_recommender",
+    instructions="You are a workout recommending specialist.",
+    model=model
+)
+
+
+    
