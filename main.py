@@ -11,7 +11,7 @@ class UserInp(BaseModel):
 
 @app.post("/stream_response/", status_code=200)
 async def main_handler(input: UserInp):
-    return StreamingResponse(content=main_streaming(user_input= input.user_input), media_type="application/json")
+    return StreamingResponse(content=main_streaming(user_input= input.user_input), media_type="application/x-ndjson")
     
 
 
