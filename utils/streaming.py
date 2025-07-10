@@ -12,7 +12,7 @@ async def main_streaming(user_input : str):
     history = []
     history.append({"role": "user", "content": user_input})        
     result =  Runner.run_streamed(starting_agent=Health_wellness_agent,input=history, context= user_session_context) 
-    history = result.final_output.to_input_list() 
+    history = result.to_input_list() 
     
 
 

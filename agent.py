@@ -10,7 +10,7 @@ from expert_agents.injury_support_agent import injury_support
 from expert_agents.escalation_agent import escalation_agent
 
 set_tracing_disabled(disabled=True)
-enable_verbose_stdout_logging()
+# enable_verbose_stdout_logging()
 
 
 Health_wellness_agent = Agent(
