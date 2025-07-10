@@ -95,6 +95,6 @@ Act as an orchestrator, coordinating tools and agents to deliver a seamless, rea
             tool_description="You are a workout recommending specialist."
         )           
         ],
-    handoffs=[Nutrition_Expert, injury_support, escalation_agent ]
+    handoffs=[Nutrition_Expert, injury_support, escalation_agent ],
 )
 
