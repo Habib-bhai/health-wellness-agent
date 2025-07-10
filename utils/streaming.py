@@ -7,6 +7,7 @@ import json
 
 
 
+
 async def main_streaming(user_input : str):
     user_session_context = UserSessionContext(name="Habib", uid=29)
     history = []
@@ -18,10 +19,12 @@ async def main_streaming(user_input : str):
 
     async for event in result.stream_events():
         if event.type == "raw_response_event" and isinstance(event.data, ResponseTextDeltaEvent):
+              history.append({"role" : "assistant" ,"content": event.data.delta})
               yield json.dumps({
                 "type": "text",
                 "content": event.data.delta
             }) + "\n"
+        
         
         elif event.type == "agent_updated_stream_event":
             # Adjust based on your actual event structure
