@@ -4,16 +4,15 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-
-gemini_api = os.getenv("OPEN_ROUTER_KEY")
+gemini_api = os.getenv("gemini_key")
 
 client = AsyncOpenAI(
     api_key=gemini_api,
-    base_url="https://openrouter.ai/api/v1"
+    base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
 )
 
 model = OpenAIChatCompletionsModel(
-    model="google/gemini-2.0-flash-exp:free",
+    model= "gemini-2.0-flash",
     openai_client=client
 )
 
